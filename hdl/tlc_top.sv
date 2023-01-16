@@ -24,7 +24,7 @@ module tlc_top
 
     assign timer_rst = btn_down;
 
-    clk_divider div_1hz (.clk_in(clk), .rst(rst), .clk_out(clk_1hz));
+    clk_divider #(.div_amt(100000000)) div_1hz (.clk_in(clk), .rst(rst), .clk_out(clk_1hz));
 
     timer timer_u (.clk(clk), .clk_en(clk_1hz), .rst(timer_rst), .en(en),
                    .load(load), .init(init), .out(out));

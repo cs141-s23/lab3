@@ -55,21 +55,21 @@ to make an adjustment.
 In `clk_divider.sv`, complete the implementation of a clock divider
 that meets the following requirements:
 
-  - The clock divider takes a clock (`clk_in`)—your 100MHz system
-    clock—and outputs a 1Hz signal (`clk_out`) to be used elsewhere
-    as a clock enable.
+  - The clock divider takes as input a clock (`clk_in`)—your 100MHz system
+    clock.
 
-  - The output clock enable (`clk_out`) should only remain high for
-    **one** input clock period (from the 100MHz clock).
+  - The module also takes an optional divide amount input parameter (`div_amt`) which you should use to dynamically slow the input clock (`clk_in`).
 
-  - The clock divider takes a reset (`rst`) input which resets the
-    divider to a state in which it has seen 0 positive edges from the
-    clock input (`clk_in`).
+  - The output clock enable (`clk_out`) should only remain high for **one** input clock period (from the `clk_in` clock signal).
+
+  - The clock divider takes a reset (`rst`) input which resets the divider to a state in which it has seen 0 positive edges from the clock input (`clk_in`).
+
+  - Our top module provides a divide amount of `100000000` to the `clk_divider` module so as to output a 1Hz signal (`clk_out`) to be used elsewhere as a clock enable (`clk_en`).
 
 In other words, for every 100 million positive edges of the input clock
 (`clk_in`), there should be one high cycle of the output clock enable
 (`clk_out`). Section [1.2](#timer) motivates why the short duty-cycle
-(on-time : off-time ratio).  
+(on-to-off ratio).  
 <span> </span> <span> </span>
 
 > **Using your FPGA:** <br>The red
@@ -288,4 +288,4 @@ above.
 
 <br> <br>
 
-> *Updated February 19, 2022, Dhilan Ramaprasad*
+> *Updated January 15, 2023, Dhilan Ramaprasad*
