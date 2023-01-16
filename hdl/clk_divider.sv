@@ -4,7 +4,6 @@ module clk_divider
     )
     (
         input logic clk_in, rst,
-        input logic [31:0] div_amt,
         output logic clk_out
     );
 
