@@ -22,7 +22,7 @@ See Section 5 and the SystemVerilog course reader for more guidance on sequentia
 constructs, including non-blocking assignment, will be necessary for this lab. Be sure to understand these new concepts before starting.
 
 ### Retrieving Handout
-> Please click this [link](https://classroom.github.com/a/RfdCriju) to
+> Please click this [link](https://classroom.github.com/a/-OraXY2h) to
 clone the Lab 3 handout code repository.
 
 ### Modules
