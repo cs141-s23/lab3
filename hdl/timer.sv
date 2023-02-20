@@ -44,7 +44,7 @@ module timer
     * If you put the 1 Hz "clock" in the sensitivity list of an always block,
     * you will lose points. So don't do it.
     *
-    * Bug Jon if you're curious and want to know more.
+    * Bug course staff if you're curious and want to know more.
     ***************************************************************************/
 
     // TODO: implement the timer specified in the lab guide
