@@ -88,7 +88,7 @@ a customized duration, so we need a dynamically adjustable timer.
 In `timer.sv`, complete the implementation of a timer module that meets
 the following requirements:
 
-  - The timer produces a 4-bit (unsigned) output (`out`) that represents
+  - The timer produces an `N`-bit (unsigned) output (`out`) that represents
     the current time remaining.
 
   - The timer takes a reset (`rst`) input, which when asserted, should
@@ -146,7 +146,7 @@ meets the following requirements:
 
 6.  If there is a car on both roads or neither road, the pedestrian state should go to the road that was red most recently (i.e., if the North-South was green more recently and there are no cars, East-West should be green next).
 
-7.  After reset, the pedestrian state should lead to green on the North-South road.
+7.  After reset, the pedestrian state should lead to green on the North-South road in a case of ambiguity (due to no prior history).
 
 8.  Green lights should last for 10 seconds and should immediately transition to yellow lights on the same road.
 
